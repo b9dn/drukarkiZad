@@ -121,7 +121,7 @@ int main(int argc, char** argv) {
 
     std::vector<std::thread> watki_drukujace;
     for(int i = 0; i < LICZBA_WATKOW_DRUKUJACYCH; i++)
-        watki_drukarek.push_back(std::thread(watek_drukujacy, aktualny_czas + i));
+        watki_drukujace.push_back(std::thread(watek_drukujacy, aktualny_czas + i));
 
     for(auto& t : watki_drukarek)
         t.join();
@@ -131,3 +131,4 @@ int main(int argc, char** argv) {
 
     return EXIT_SUCCESS;
 }
+
